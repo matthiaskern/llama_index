@@ -1,5 +1,4 @@
 from typing import Any, List, Optional
-from llama_index.core.bridge.pydantic import BaseModel
 from llama_index.core.base.llms.types import (
     ChatMessage,
     ChatResponse,
@@ -69,7 +68,7 @@ class LLMStructuredPredictEndEvent(BaseEvent):
         output (BaseModel): Predicted output class.
     """
 
-    output: BaseModel
+    output: Any
 
     @classmethod
     def class_name(cls):
@@ -84,7 +83,7 @@ class LLMStructuredPredictInProgressEvent(BaseEvent):
         output (BaseModel): Predicted output class.
     """
 
-    output: BaseModel
+    output: Any
 
     @classmethod
     def class_name(cls):
